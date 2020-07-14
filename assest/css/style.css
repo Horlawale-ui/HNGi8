@@ -1,0 +1,119 @@
+*{
+ margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: cursive, sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: #eee;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+.brand{
+    font-size: 3rem;
+    font-weight: 300;
+    transform: translateX(-1000px);
+    animation: slideIn .5s forwards;
+}
+.brand span{
+    color: crimson;
+}
+nav a{
+    display: inline-flex;
+}
+nav a{
+    list-style: none;
+    transform: translateX(+1000px);
+    animation: slideIn .5s forwards;
+}
+
+nav a:nth-child(1){
+    animation-delay: 0s;
+}
+nav a:nth-child(2){
+    animation-delay: .5s;
+}
+nav a:nth-child(3){
+    animation-delay: 1s;
+}
+nav a:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+nav a{
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+}
+nav  a:last-child{
+    margin-right: 0;
+}
+
+nav  a::before,
+nav  a::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: crimson;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+nav a::before{
+    top: 0;
+    transform-origin: left;
+}
+nav a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+nav a:hover::before,
+nav a:hover::after{
+   transform: scaleX(1);
+}
+
+@keyframes slideIn {
+    from{
+        
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+/* moblile nav icon */
+#menu {
+    display: none;
+    cursor: pointer;
+}
+#menu ion-icon {
+	font-size: 190%;
+	color: #fff; 
+}
