@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <title>Contact Us | HNG Internship</title>
+    <meta name="description" content="This is the contact us page" />
+
+    <!--Roboto Font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+    <!--AOS CSS-->
+    <link href="./assets 2/aos/aos.css" rel="stylesheet" />
+
+    <!--CSS Styles-->
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="icon" type="img/png" href="img/hng-favicon.png" />
+    <link rel="stylesheet" href="animate.css" />
+    <style>
+      .wow:first-child {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="head">
+      <div class="container">
+        <div class="logo">
+          <a href=""> <img src="images/log.png" alt="" /></a>
+        </div>
+        <a href="javascript:void(0)" class="ham-burger">
+          <span></span>
+          <span></span>
+        </a>
+        <div class="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hngi8.html">HNGI 8.0</a></li>
+            <li><a href="team.html">Mentors</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login form.html">Login</a></li>
+            <li><a href="sign-up.html">Join hngi8</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section  style="background-color: #fff;" class="contact">
+      <div class="text-content">
+        <h1 data-aos="flip-up" data-aos-delay="250">SEND US A MESSAGE</h1>
+        <p data-aos="flip-down" data-aos-delay="250">
+          ...Changing the world, one intern at a time
+        </p>
+      </div>
+      <div class="background-image">
+        <div id="image">
+          <img src="./images/bck.png" width="100% !important" />
+        </div>
+      </div>
+      <div data-aos="fade-right" data-aos-delay="500" class="contact-form">
+        <div class="card">
+          <span data-aos="flip-right" class="card-title"
+            >Write us a message</span
+          >
+          <div class="card-content">
+            <form>
+              <div data-aos="flip-right" data-aos-delay="700">
+                <input type="text" placeholder="Enter name" />
+                <label>Name</label>
+              </div>
+              <div data-aos="flip-right" data-aos-delay="900">
+                <input type="text" placeholder="example@email.com" />
+                <label>E-mail</label>
+              </div>
+              <div data-aos="flip-right" data-aos-delay="1200">
+                <input type="text" placeholder="Enter subject" />
+                <label>Subject</label>
+              </div>
+              <div data-aos="flip-right" data-aos-delay="1400">
+                <textarea type="text" placeholder="Enter message"></textarea>
+                
+              </div>
+              <a
+                data-aos="flip-right"
+                data-aos-delay="1500"
+                href="#"
+                class="btn waves-effect"
+                >send message</a
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="content">
+          <div class="box form wow slideInLeft">
+            <form action="POST" data-netlify="true">
+              <input type="text" name="name" placeholder="Enter Your Name" />
+              <input type="email" name="email" placeholder="Enter Your Email" />
+              <input type="text" name="phone" placeholder="Enter Your Phone" />
+              <textarea placeholder="Enter Message"></textarea>
+              <div class="field">
+                <div data-netlify-recaptcha="true"></div>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+          <div class="box text wow slideInRight">
+            <h2>Get Connected With Us</h2>
+            <p class="title-p">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut optio
+              impedit et nisi natus, delectus sunt quae modi ipsam, aliquam
+              alias adipisci.
+            </p>
+            <div class="info">
+              <ul>
+                <li>
+                  <i class="fa fa-map-marker-alt"></i>3 Birrel Avenue Sabo,
+                  Yaba, Lagos state
+                </li>
+                <li><i class="fa fa-phone"></i>+234 *** *** *** *</li>
+                <li><i class="fa fa-envelope"></i>hello@hng.tech</li>
+              </ul>
+            </div>
+            <div class="social">
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-youtube"></i></a>
+              <a href=""><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="copy">
+              © 2020, HNG Internship. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+    <script src="wow.min.js"></script>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="script.js"></script>
+    <script>
+      wow = new WOW({
+        animateClass: "animated",
+        offset: 0,
+      });
+      wow.init();
+    </script>
+
+    <!--AOS JS CDN-->
+    <script src="assets/aos/aos.js"></script>
+
+    <!--AOS-->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
