@@ -1,18 +1,45 @@
-    // Access DOM elemnts //
-const menuIcon = document.getElementById('menu-icon');
-const navBtns = document.getElementById('nav-btns');
+$(document).ready(function () {
+  $('.ham-burger, .nav ul li a').click(function () {
+    $('.nav').toggleClass('open');
+    $('.ham-burger').toggleClass('active');
+  });
 
+  $('.accordian-container').click(function () {
+    $('.accordian-container').children('.body').slideUp();
+    $('.accordian-container').removeClass('active');
+    $('.accordian-container')
+      .children('.head')
+      .children('i')
+      .removeClass('fa-angle-down')
+      .addClass('fa fa-angle-up');
+    $(this).children('.body').slideDown();
+    $(this).addClass('active');
+    $(this)
+      .children('.head')
+      .children('i')
+      .removeClass('fa-angle-up')
+      .addClass('fa-angle-down');
+  });
 
-// menu toggle //
-menuIcon.addEventListener('click', () => {
-    if(navBtns.style.display == 'none' && searchArea.style.display == 'none') {
-        navBtns.style.display = 'inline';
-        searchArea.style.display = 'inline';
-        menuIcon.setAttribute('name', 'close-outline'); /* change the menu icon */
-        
-    }else {
-        navBtns.style.display = 'none';
-        searchArea.style.display = 'none';
-        menuIcon.setAttribute('name', 'menu-outline');
+  $('.nav ul li a, .go-down').click(function (event) {
+    if (this.hash !== '') {
+      event.preventDefault();
+      let hash = this.hash;
+
+      $('html,body').animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        800,
+        function () {
+          window.location.hash = hash;
+        }
+      );
+
+      //  add active class in navbar
+
+      $('.nav ul li a').removeClass('active');
+      $(this).addClass('active');
     }
+  });
 });
